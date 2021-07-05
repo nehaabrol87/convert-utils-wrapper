@@ -1,8 +1,7 @@
  export interface ConversionInterface {
     toImperial(): string;
-    // toMetric(): null | number;
+    toMetric(): string;
   }
-
 
   export enum PropertyToConvert {
     Length = 'length',
