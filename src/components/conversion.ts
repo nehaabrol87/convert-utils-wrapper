@@ -14,6 +14,7 @@ export class Conversion implements ConversionInterface {
 
   toImperial() {
     let convertedValue =  null;
+    // TODO: This logic could potentially be moved to the model to keep the controller thin. I did not do it for the POC
     if(this.propertyToConvert === PropertyToConvert.Length) {
         convertedValue =  convert(this.valueToConvert).from('ft').to('m');
     }
@@ -31,6 +32,8 @@ export class Conversion implements ConversionInterface {
 
   toMetric() {
     let convertedValue =  null;
+
+       //TODO: This logic could potentially be moved to the model to keep the controller thin. I did not do it for the POC
     if(this.propertyToConvert === PropertyToConvert.Length) {
         convertedValue =  convert(this.valueToConvert).from('m').to('ft');
     }
